@@ -18,6 +18,7 @@ public class Server {
             outputStream.close();
             socket.close();
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 }
