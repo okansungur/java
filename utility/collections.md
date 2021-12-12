@@ -108,6 +108,9 @@ tailSet(object); output= [apple,orange]
 - Like loops similar to enumerations but enumeration is faster than Iterator.
 - Methods are more advanced
 - Has remove method
+	
+![alt text](https://github.com/okansungur/java/blob/main/utility/iterator.png?raw=true)
+	
 Methods
 - boolean hasNext()
 - Object next()
@@ -207,45 +210,6 @@ public int compare(Object one, Object two) {
 }
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
