@@ -58,6 +58,39 @@ Methods:
 - Object remove(int);
 
 
+LinkedList abc=new LinkedList();
+- abc.removeFirst() ;
+- abc.removeLast();
+- abc.get(index i);
+- abc.get(2).hashCode();
+
+### HashSet
+- Not Sequential 
+- Duplicates are not allowed
+- Doesnt have a get method
+- get() metodu bulunmaz!!
+- Iterators can be used
+### LinkedHashSet
+- Similar but sequential 
+```
+LinkedHashSet lhs=new LinkedHashSet();		
+lhs.add(“apple");
+lhs.add(“orange");
+System.out.println (lhs);
+Iterator i=lhs.iterator();
+while (i.hasNext()){		
+System.out.println (i.next());
+} 
+```
+
+
+
+
+
+
+
+
+
 
 
 
