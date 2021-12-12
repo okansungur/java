@@ -20,7 +20,7 @@ System.out.println (yenidizi[say]);
 ```
 
 
-General Methods
+**General Methods
 - int size();
 - boolean isEmpty();
 - boolean contains(Object);
@@ -43,6 +43,13 @@ al.set();
 al.clear(); //clear all elements
 al.remove(int);
 al.remove(object);
+
+### List
+- Ordered collection of objects in which duplicate values can be stored
+- Allow nulls
+-
+List<Student> students=new ArrayList<Student>();  
+
 
 ### LinkedList
 
@@ -70,6 +77,7 @@ LinkedList abc=new LinkedList();
 - Doesnt have a get method
 - get() metodu bulunmaz!!
 - Iterators can be used
+	
 ### LinkedHashSet
 - Similar but sequential 
 ```
@@ -87,9 +95,14 @@ System.out.println (i.next());
 - Faster access
 tailSet(object); output= [apple,orange]
 
-
+### List & Set Differences	
+- List can contain duplicate elements whereas Set includes unique items
+- List is an ordered collection  insertion order is important whereas Set is an unordered collection  insertion order is not important
+- List interface can allow  null values whereas Set interface allows only a single null value
+	
+	
 ### Iterator
-- Like loops similar to enumerations
+- Like loops similar to enumerations but enumeration is faster than Iterator.
 - Methods are more advanced
 - Has remove method
 Methods
