@@ -1,6 +1,6 @@
-## Java Collections
+# Java Collections
 
-# Arrays (Resize)
+## Arrays (Resize)
 ```
 int dizi[];
 dizi=new int[5];
