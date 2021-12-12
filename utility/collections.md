@@ -1,5 +1,8 @@
 # Java Collections
 
+
+![alt text](https://github.com/okansungur/java/blob/main/utility/collimages1.png?raw=true)
+
 ## Arrays (Resize)
 ```
 int dizi[];
