@@ -82,6 +82,17 @@ while (i.hasNext()){
 System.out.println (i.next());
 } 
 ```
+### TreeSet
+- Adds alphabetically
+- Faster access
+tailSet(object); output= [apple,orange]
+
+
+Iterator
+
+
+
+
 
 
 
