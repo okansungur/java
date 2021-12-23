@@ -1,6 +1,9 @@
 package com.example.simplerest.controller;
 
 
+import com.example.simplerest.dto.EnrollmentRequest;
+import com.example.simplerest.service.EnrollmentServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 public class DummyController {
+
+    @Autowired
+    private EnrollmentServiceImpl enrollmentService;
 
     @GetMapping("/ships")
     public String getShips() {
@@ -23,6 +29,16 @@ public class DummyController {
         String encoded = passwordEncoder.encode(sequence);
 
         return "Encoded string:" + encoded;
+    }
+
+    @GetMapping("/enroll_test")
+    public String sampleEnroll() {
+        EnrollmentRequest enrollmentRequest=new EnrollmentRequest();
+        enrollmentRequest.setStudentid(2);
+        enrollmentRequest.setLectureid("2");
+        enrollmentRequest.setRoomname("A-101");
+        enrollmentService.enrollClass(enrollmentRequest);
+        return "success";
     }
 
 

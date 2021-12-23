@@ -1,97 +1,34 @@
 package com.example.simplerest.dto;
 
-
 public class EnrollmentRequest {
 
-	private Long flightId;
-	private String passengerFirstName;
-	private String passengerLastName;
-	private String passengerEmail;
-	private String passengerPhone;
-	private String nameOnTheCard;
-	private String cardNumber;
+	private int studentid;
+	private String lectureid;
+	private String roomname;
 
-	private String expirationDate;
-	private String securityCode;
-
-	public Long getFlightId() {
-		return flightId;
+	public int getStudentid() {
+		return studentid;
 	}
 
-	public void setFlightId(Long flightId) {
-		this.flightId = flightId;
+	public void setStudentid(int studentid) {
+		this.studentid = studentid;
 	}
 
-	public String getPassengerFirstName() {
-		return passengerFirstName;
+	public String getLectureid() {
+		return lectureid;
 	}
 
-	public void setPassengerFirstName(String passengerFirstName) {
-		this.passengerFirstName = passengerFirstName;
+	public void setLectureid(String lectureid) {
+		this.lectureid = lectureid;
 	}
 
-	public String getPassengerLastName() {
-		return passengerLastName;
+	public String getRoomname() {
+		return roomname;
 	}
 
-	public void setPassengerLastName(String passengerLastName) {
-		this.passengerLastName = passengerLastName;
+	public void setRoomname(String roomname) {
+		this.roomname = roomname;
 	}
 
-	public String getPassengerEmail() {
-		return passengerEmail;
-	}
-
-	public void setPassengerEmail(String passengerEmail) {
-		this.passengerEmail = passengerEmail;
-	}
-
-	public String getPassengerPhone() {
-		return passengerPhone;
-	}
-
-	public void setPassengerPhone(String passengerPhone) {
-		this.passengerPhone = passengerPhone;
-	}
-
-	public String getNameOnTheCard() {
-		return nameOnTheCard;
-	}
-
-	public void setNameOnTheCard(String nameOnTheCard) {
-		this.nameOnTheCard = nameOnTheCard;
-	}
-
-	public String getCardNumber() {
-		return cardNumber;
-	}
-
-	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber;
-	}
-
-	public String getExpirationDate() {
-		return expirationDate;
-	}
-
-	public void setExpirationDate(String expirationDate) {
-		this.expirationDate = expirationDate;
-	}
-
-	public String getSecurityCode() {
-		return securityCode;
-	}
-
-	public void setSecurityCode(String securityCode) {
-		this.securityCode = securityCode;
-	}
-
-	@Override
-	public String toString() {
-		return "ReservationRequest [flightId=" + flightId + ", passengerFirstName=" + passengerFirstName
-				+ ", passengerLastName=" + passengerLastName + ", passengerEmail=" + passengerEmail
-				+ ", passengerPhone=" + passengerPhone + ", nameOnTheCard=" + nameOnTheCard + ", cardNumber="
-				+ cardNumber + ", expirationDate=" + expirationDate + ", securityCode=" + securityCode + "]";
-	}
 
 }
