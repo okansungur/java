@@ -248,7 +248,7 @@ public static void main(String args[]){
 Pattern pat;
 Matcher mat;
 boolean find;
-String aa="merhaba aptech java swing";
+String aa="merhaba  java swing";
 pat=Pattern.compile("ur");//aranacak karakter veya sözcük // ana metin bu diil 
 //pat=Pattern.compile("[a-z]");
 //pat=Pattern.compile("e.+?d");// e ile baslayip d ile biten en kisa söz
