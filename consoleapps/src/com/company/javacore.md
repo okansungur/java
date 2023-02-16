@@ -276,7 +276,7 @@ out.print(bul[i])
 	if (mat.find()){
 		
 		
-		System.out.println (mat.replaceAll("salak"));
+		System.out.println (mat.replaceAll("hede"));
 		}
 
 ```
