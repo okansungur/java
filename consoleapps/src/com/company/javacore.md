@@ -1,4 +1,4 @@
-#
+# Thread, paint, regex 
 
 ```
 public void paint(Graphics g){
@@ -284,6 +284,48 @@ out.print(bul[i])
 
 
 ```
+class A implements Runnable {
+	
+	public void run() {
+		
+		while (true) {
+			System.out.println("A kanalI...");
+			
+			try {
+				Thread.sleep(1200);
+			} catch (InterruptedException e) {}
+			
+			}}
+	}
+
+class B extends Thread {
+	
+	public void run() {
+		while (true) {
+			System.out.println("B kanalI...");
+			
+			try {
+				Thread.sleep(700);
+			} catch (InterruptedException e) {}		
+		}}	
+}
+class Demo {
+	
+	public static void main(String args[]) {
+		
+		System.out.println("Main Methodu BasladI..");
+		
+		Thread t1 = new Thread ( new A() );
+		Thread t2 = new B();
+		
+		t1.start();
+		t2.start();
+		
+		System.out.println("Main Methodu Bitti..");
+		
+	}	
+	
+}
 
 
 
