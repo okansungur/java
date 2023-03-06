@@ -1,0 +1,66 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class adapters{
+	public static void main(String args[]){
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		pencere pen=new pencere();
+		pen.setVisible(true);
+		pen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		}}
+class pencere extends JFrame{
+	Container cont;
+		JButton a;
+		JLabel b;
+		JTextArea  ta;
+		JCheckBox cb;
+		JSlider ss;
+		JPanel panelim;
+		public pencere(){
+		setTitle("renkler");
+		setSize(400,400);
+		setLocation(100,100);
+		cont=this.getContentPane();
+		cont.setLayout(new FlowLayout());
+	a=new JButton("dontclick");
+		a.addActionListener(new ActionListener(){
+	public void actionPerformed (ActionEvent ae){
+		a.setForeground(Color.red);
+		a.setBackground(Color.pink);
+		}});
+b=new JLabel("clickme!");
+b.addMouseListener(new MouseAdapter(){
+	public void mouseClicked(MouseEvent me){
+		b.setText("Bravo");
+		}});
+ta=new JTextArea("Noo!",5,5);
+ta.addFocusListener(new FocusAdapter(){
+	public void focusGained(FocusEvent fe){
+		ta.setText("Yyesss");
+		}});
+ta.addKeyListener(new KeyAdapter(){
+		public void keyPressed(KeyEvent ke){
+			cont.setBackground(Color.cyan);
+			}});
+		ss=new JSlider(0,10);
+		ss.addMouseMotionListener(new MouseMotionListener(){
+	public void mouseMoved(MouseEvent ce){}
+public void mouseDragged(MouseEvent ce){
+	ss.setBackground(Color.green);
+	}	});
+cb=new JCheckBox("dont touch");
+cb.addItemListener(new ItemListener(){
+	public void itemStateChanged(ItemEvent ie){
+	cb.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		}});
+
+panelim=new JPanel(new FlowLayout(),true);
+
+cont.addComponentListener(new ComponentAdapter() {
+      public void componentResized(ComponentEvent ev) {
+      	panelim.setBackground(Color.red);
+     panelim.setBounds(300, 300, 100, 100);
+     }});
+cont.add(a);cont.add(b);cont.add(ta);cont.add(cb);
+cont.add(ss);cont.add(panelim);
+	}}

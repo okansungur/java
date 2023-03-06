@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar>
+	<enterprise-beans>
+		<session>
+			<ejb-name>merhaba</ejb-name>
+			<home>merhabaev</home>
+			<remote>merhaba</remote>
+			<ejb-class>merhababean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
+	</enterprise-beans>
+</ejb-jar>

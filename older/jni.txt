@@ -1,0 +1,51 @@
+
+Header için
+class okan{
+  public native String merhaba();
+  static {
+    System.loadLibrary("okan"); //librarimiz
+  }
+}
+
+
+public class okan{
+  public native String merhaba(String adınıyaz);
+  static {
+    System.loadLibrary("okan"); //librarimiz  }}
+javah okan
+Dotnet  
+C++ win32 projects (windowdan—application dll dosyası olustur)
+Proje adı=okan
+Olusturulan header dosyasını aynı folderdan add sources ile ilave et(okan.h);
+Okan.cppye ilave et
+#include "okan.h" 
+JNIEXPORT jstring JNICALL Java_okan_merhaba
+  (JNIEnv *env, jobject obj) {
+    return  env->NewStringUTF("Merhabalar C'den");
+}
+debug et olusan dlli al ve okan.classda olacak
+tools options c++ directories include files sdk14 include win32 yol goster
+vee
+class alo{
+  public static void main(String[] args) {
+okan ok=new okan();
+System.out.println (ok.merhaba());
+    }}
+class alo{
+  public static void main(String[] args) {
+okan ok=new okan();
+System.out.println (ok.merhaba("fatma"));
+    }}
+Okan.cpp
+#include "okan.h" 
+JNIEXPORT jstring  JNICALL Java_okan_merhaba
+  (JNIEnv *env, jobject obj,jstring  hh) {
+
+    const char *str = env->GetStringUTFChars(hh,0);
+    printf("%s\n", str);
+	char buf[100];
+	scanf("%s",buf);
+	printf("%s\n\n",buf);
+    return  env->NewStringUTF("wedwqewqedw");
+
+}
